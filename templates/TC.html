@@ -1,0 +1,41 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="../static/css/Emp.css"> 
+<body>
+  {% include 'nav.html' %}
+	{% block content %}
+<div class="section-center">
+  		<h2 class="mb-0">Online Airport System</h2>
+  	</div>
+<h1 contenteditable spellcheck="false">ADD Traffic Controller</h1> <br/> 
+<div class = "form">
+<h2 style = "color: white; text-align: center">Add Annual Medical Exam Details</h2>
+<div class="input-container ic1">
+        <input id="ssn" class="input" name = "ssn" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="ssn" class="placeholder">SSN</label>
+      </div>
+	 <div class="input-container ic1">
+        <input id="exam_date" class="input" name = "exam_date" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="exam_date" class="placeholder">Exam_date</label>
+      </div>
+<center><a href="{{ url_for('addTC')}}">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+    <a href="{{ url_for('showTC')}}">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      TCList
+    </a></center>
+  
+	{% endblock content %}
+</div>
+
+</body>
+</html>

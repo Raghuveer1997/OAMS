@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <body>
+     <link rel="stylesheet" type="text/css" href="../static/css/Emp.css">  
+     {% include 'nav.html' %}
+     {% block content %}
+   
+      <table border = 1>
+         <thead>
+            <td>FAA No</td>
+            <td>Test Name</td>
+            <td>Max Score</td>
+           
+            
+         </thead>
+         
+         {% for row in data %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+               </tr>
+         {% endfor %}
+      </table>
+      <br/>
+      <form><a href = "{{ url_for('addTest')}}" style = "color:#ffeba7">Go back to ADD Tests page</a></form>
+      
+	{% endblock content %}
+   </body>
+</html>

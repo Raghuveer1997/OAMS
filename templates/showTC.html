@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+   <body>
+     <link rel="stylesheet" type="text/css" href="../static/css/Emp.css">  
+     {% include 'nav.html' %}
+     {% block content %}
+   
+      <table border = 1>
+         <thead>
+            <td>SSN</td>
+            <td>Medical exam date</td>
+            
+         </thead>
+         
+         {% for row in data %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+    
+               </tr>
+         {% endfor %}
+      </table>
+      <br/>
+      <form><a href = "{{ url_for('addTC')}}" style = "color:#ffeba7">Go back to ADD Traffic Controller page</a></form>
+      
+	{% endblock content %}
+   </body>
+</html>

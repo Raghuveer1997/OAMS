@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="../static/css/Navigation.css">
+	<!--<link rel="stylesheet" type="text/css" href="../static/css/Emp.css">-->
+	{% include 'nav.html' %}
+	{% block content %}
+
+	<div class="main" >
+	
+	<input class="dark-light" type="checkbox" id="dark-light" name="dark-light"/>
+  	<label for="dark-light"></label>
+
+  	<div class="light-back"></div> 
+	  	<div class="section-center">
+  		<h1 class="mb-0">Online Airport System</h1>
+  	</div>
+
+	
+
+  	<div class="sec-center"> 	
+	  	<input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+	  	<label class="for-dropdown" for="dropdown">Admin Options<i class="uil uil-arrow-down"></i></label>
+  		<div class="section-dropdown"> 
+  			<input class="dropdown-sub" type="checkbox" id="dropdown-sub" name="dropdown-sub"/>
+		  	<label class="for-dropdown-sub" for="dropdown-sub">Airplane <i class="uil uil-plus"></i></label>
+	  		<div class="section-dropdown-sub"> 
+	  			<a href="{{ url_for('addModel')}}">Add Model <i class="uil uil-arrow-right"></i></a>
+	  			<a href="{{ url_for('addPlane')}}">Add Plane <i class="uil uil-arrow-right"></i></a>
+				<a href="{{ url_for('addExp')}}">Add Expert <i class="uil uil-arrow-right"></i></a>
+	  		</div>
+		  	<input class="dropdown-sub" type="checkbox" id="dropdown-sub" name="dropdown-sub"/>
+		  	<label class="for-dropdown-sub" for="dropdown-sub">Employee <i class="uil uil-plus"></i></label>
+	  		<div class="section-dropdown-sub"> 
+	  			<a href="{{ url_for('addEmp')}}">Add Employee <i class="uil uil-arrow-right"></i></a>
+	  			<a href="{{ url_for('addTec')}}">Add Technician <i class="uil uil-arrow-right"></i></a>
+				<a href="{{ url_for('addTC')}}">Add Traffic Controller <i class="uil uil-arrow-right"></i></a>
+	  		</div>
+  			<a href="{{ url_for('addTest')}}">Add Test <i class="uil uil-arrow-right"></i></a>
+  
+  		</div>
+		  {% endblock content %}
+  	</div>

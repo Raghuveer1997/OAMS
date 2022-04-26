@@ -1,0 +1,43 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="../static/css/Emp.css"> 
+<body>
+    {% include 'nav.html' %}
+	{% block content %}
+<div class="section-center">
+  		<h2 class="mb-0">Online Airport System</h2>
+  	</div>
+<h1 contenteditable spellcheck="false">ADD Expert</h1> <br/> 
+<div class = "form">
+<h2 style = "color: white; text-align: center">Add Expert Details</h2><br/>
+
+<div class="input-container ic1">
+        <input id="model_no" class="input" name="model_no" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="model_no" class="placeholder">Modle Number</label>
+		</div>
+<div class="input-container ic1">
+        <input id="ssn" class="input" name = "ssn" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="ssn" class="placeholder">SSN</label>
+      </div>
+	 
+<center><a href="{{ url_for('addExp')}}">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Submit
+  </a>
+    <a href="{{ url_for('showExp')}}">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        ExpList
+      </a></center>
+      
+	{% endblock content %}
+</div>
+
+</body>
+</html>

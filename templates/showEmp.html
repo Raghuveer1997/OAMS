@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+   <body>
+      {% include 'nav.html' %}
+	{% block content %}
+     <link rel="stylesheet" type="text/css" href="../static/css/Emp.css">  
+  <!---- <header>
+              <img src="https://cdn.create.vista.com/api/media/small/471109908/stock-vector-airport-gold-plated-metalic-icon">
+               <nav>
+                   <ul>
+                       <li><a href="#">Home</a></li>
+                       <li><a href="#">About</a></li>
+       
+                       <li><a href="#">Contact</a></li>
+                       <li><a href="#">Login\SignUp</a></li>
+                   </ul>
+               </nav>
+           </header>-->
+   
+      <table border = 1>
+         <thead>
+            <td>SSN</td>
+            <td>EName</td>
+            <td>Address</td>
+            <td>Salary</td>
+            <td>Union No</td>
+            <td>Phno no</td>
+            <td>Role</td>
+         </thead>
+         
+         {% for row in data %}
+            <tr>
+               <td>{{row[0]}}</td>
+               <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+               <td> {{ row[3]}}</td>
+               <td>{{row[4]}}</td>
+               <td>{{row[5]}}</td>
+               <td>{{row[6]}}</td>
+               </tr>
+         {% endfor %}
+      </table>
+      <br/>
+      <form><a href = "{{ url_for('addEmp')}}" style = "color:#ffeba7">Go back to Add Emp page</a></form>
+     
+	{% endblock content %}
+      
+   </body>
+</html>

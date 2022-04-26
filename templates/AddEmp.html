@@ -1,0 +1,74 @@
+<head>
+<link rel="stylesheet" type="text/css" href="../static/css/Emp.css"> 
+</head>
+<body>
+  {% include 'nav.html' %}
+	{% block content %}
+<div class="section-center">
+  		<h2 class="mb-0">Online Airport System</h2>
+  	</div>
+<h1 contenteditable spellcheck="false">ADD Employees</h1> <br/> 
+   <div class="form">
+   <form action = "/add_emp" method = "POST">
+    <h1 contenteditable spellcheck="false">ADD Employees</h1> <br/>
+      <!--<div class="title">ADD Employees</div>
+	  
+      <div class="subtitle">Add the details of Airport Employees!</div>-->
+      <div class="input-container ic1">
+        <input id="ssn" class="input" name="ssn" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="ssn" class="placeholder">SSN</label>
+      </div>
+      <div class="input-container ic2">
+        <input id="name" class="input" name = "name" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="name" class="placeholder">Name</label>
+      </div>
+      <div class="input-container ic2">
+        <input id="address" class="input" name = "address" type="text" placeholder=" " />
+        <div class="cut cut-short"></div>
+        <label for="address" class="placeholder">Address</>
+      </div>
+	  <div class="input-container ic1">
+        <input id="salary" class="input" name = "salary" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="salary" class="placeholder">Salary</label>
+      </div>
+	  <div class="input-container ic1">
+        <input id="union" class="input" name = "union" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="union" class="placeholder">Union Mem no</label>
+      </div>
+	  <div class="input-container ic1">
+        <input id="phno" class="input" name = "phno" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="phno" class="placeholder">Phone Number</label>
+      </div>
+	  <div class="input-container ic1">
+        <input id="role" class="input" name = "role" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="role" class="placeholder">Role</label>
+      </div>
+      <center>
+       <!---- <button type="submit" ><a href="{{ url_for('showEmp')}}">Submit</a></button>
+        <button type="submit" ><a href="{{ url_for('showEmp')}}">EmpList</a></button>-->
+       <a href="{{ url_for('addEmp')}}">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+    <a href="{{ url_for('showEmp')}}">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      EmpList
+    </a></center>
+    {{ msg }}
+    </form>
+    {% endblock content %}
+    </div><br/>
+    
+</body>

@@ -1,0 +1,42 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="../static/css/Emp.css"> 
+<body>
+  {% include 'nav.html' %}
+	{% block content %}
+<div class="section-center">
+  		<h2 class="mb-0">Online Airport System</h2>
+  	</div>
+<h1 contenteditable spellcheck="false">ADD Plane</h1> <br/> 
+<div class = "form">
+<h2 style = "color: white; text-align: center">Add Plane Details</h2>
+<div class="input-container ic1">
+        <input id="reg_no" class="input" name = "reg_no" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="reg_no" class="placeholder">Reg no</label>
+      </div>
+	 <div class="input-container ic1">
+        <input id="model_no" class="input" name = "model_no" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="model_no" class="placeholder">Model Number</label>
+      </div>
+<center><a href="{{ url_for('addPlane')}}">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+    <a href="{{ url_for('showPlane')}}">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      PlaneList
+    </a></center>
+   
+	{% endblock content %}
+
+</div>
+
+</body>
+</html>
